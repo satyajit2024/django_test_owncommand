@@ -1,0 +1,38 @@
+//////
+For Out Side the of the app inside the project directory if any script write and conenct with the django app 
+
+import os
+import django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mqtt.settings")
+django.setup()
+
+
+this ings was reqired
+//////
+
+
+//////
+For use with manage.py and create own command and execute the script file then 
+
+management/commands folder inside the django_app
+then 
+
+from django.core.management.base import BaseCommand
+from mqtt_app.models import Usermaster
+
+class Command(BaseCommand):
+    help = 'Your command description here'
+
+    def handle(self, *args, **options):
+        # Your script logic here
+        queryset = Usermaster.objects.all()
+        for item in queryset:
+            self.stdout.write(self.style.SUCCESS(str(item)))
+            print(item.name)
+
+
+under the handle you run the script by call this or anything you want to do or write whole the script 
+inside the command clas it will execute the same
+
+//////
