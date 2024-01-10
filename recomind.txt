@@ -37,3 +37,6 @@ under the handle you run the script by call this or anything you want to do or w
 inside the command clas it will execute the same
 
 //////
+
+
+git remote set-url origin https://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@github.com/satyajit2024/django_test_owncommand.git
