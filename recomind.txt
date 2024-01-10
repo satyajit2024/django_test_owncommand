@@ -1,6 +1,7 @@
 //////
 For Out Side the of the app inside the project directory if any script write and conenct with the django app 
 
+
 import os
 import django
 
